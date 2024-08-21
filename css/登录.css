@@ -1,0 +1,190 @@
+/* 
+  媒体查询设置不同屏幕下左边背景的宽度
+*/
+@media screen and (min-width:1000px) {
+    .wrap_bg {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .wrap_bg {
+        width: 375px;
+    }
+}
+
+.wrap {
+	display: flex;/* 给父级元素设置弹性盒，两个块还一行显示 */
+}
+
+/* 左边背景 */
+.wrap_bg{
+	height: 100vh;
+	background-image: url(../img/登录页/左边背景.jpg);
+	background-size: cover;/* 缩放图片适应容器 */
+	background-position: 50%;/* 图片居中 */
+}
+
+/* 右边内容 */
+.login{
+	flex-grow: 1;
+	height: 100vh;
+}
+.login-top{
+	height: 40px;
+	padding: 20px;
+}
+
+	/* 导航栏 */
+.login-top-left{
+	float: left;
+	height: 40px;
+	font-size: 26px;
+	color: #333333;
+	font-weight: 500;
+}
+.logo{
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+.login-right{
+	float: right;
+	margin-right: 20px;
+}
+.login-right li{
+	float: left;
+	line-height: 40px;
+	margin: 0 10px;
+}
+.login-right li a{
+	display: inline-block;
+	font-size: 14px;
+	line-height: 40px;
+	font-weight: 400;
+	color: #838383;
+}
+.login-right li:hover a{
+	color: #FF6700;
+}
+
+/* 登录盒子 */
+.login-box{
+	padding-top: 100px;
+}
+.login-card{
+	width: 360px;
+	border-radius: 4;
+	padding: 40px 45px;
+	margin: 0 auto 80px;/* 盒子居中 */
+	box-shadow: 0 20px 50px 0 hsl(0deg 0% 64% / 10%);
+}
+.item div{
+	width: 170px;
+	height: 60px;
+	display: inline-block;
+	color: #ff6700;
+	font-size: 18px;
+	text-align: center;
+	line-height: 60px;
+	cursor: pointer;
+}
+
+
+	/* 账号密码 */
+.user-box{
+	margin-top: 20px;
+}
+.user{
+	width: 356px;
+	height: 60px;
+	border:2px solid #b0b0b0;
+	background: #f9f9f9;
+	border: none;
+	border-radius: 4px;
+	position: relative;
+}
+.user label{
+	color: #aaaa7f;
+	font-weight: 400;
+	font-size: 17px;
+	position: absolute;
+	left: 15px;
+	top: 20px;
+	pointer-events: none;
+	transition: 0.5s;/* 过渡效果 */
+}
+.user input{
+	width: 90%;
+	height: 30px;
+	margin-top: 25px;
+	margin-left: 15px;
+	border: none;/* 去除input的边框 */
+	outline: none;/* 去除input的轮廓线 */
+	font-size: 20px;
+	background: #f9f9f9;
+}
+		/* 光标进入input，文字缩小，位置靠上 */
+.user input:focus+label,.user input:valid+label{
+	font-size: 12px;
+	top: 8px;
+}
+
+	/* 登录按钮 */
+.login-btn{
+	margin-top: 20px;
+	width: 356px;
+	height: 60px;
+	background-color: #ffbe99;
+	text-align: center;
+	font:bold 18px/60px "黑体";
+	border: none;
+	color: #fff;
+	border-radius: 4px;
+}
+.login-btn:hover{
+	background-color: #ffcba9;
+}
+
+	/* 登录说明 */
+.login-other{
+	text-align: left;
+	line-height: 50px;
+}
+.login-other a{
+	font-size: 17px;
+	color: #ff5c00;
+}
+.other-right{
+	float: right;
+}
+
+	/* 登录方式 */
+.login-method{
+	width: 360px;
+	height: 96px;
+}
+.login-method h3{
+	height: 40px;
+	text-align: center;
+	font-size: 17px;
+	font-weight: 400;
+	color: #aaa;
+	line-height: 40px;
+}
+.method-list{
+	width: 360px;
+	height: 46px;
+	margin-top: 10px;
+	text-align: center;
+}
+.method-list a{
+	width: 46px;
+	height: 46px;
+	position: relative;
+	display: inline-block;
+	margin: 0 10px;
+}
+.method-list img{
+	position: absolute;
+}

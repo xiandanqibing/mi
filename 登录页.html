@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>小米登录页</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" href="./css/登录.css">
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 左边背景 -->
+			<div class="wrap_bg"></div>
+			<!-- 右边内容 -->
+			<div class="login">
+				<!-- 导航栏 -->
+				<div class="login-top">
+					<div class="login-top-left">
+						<img src="img/logo.png" class="logo">小米账号
+					</div>
+					<ul class="login-right">
+						<li><a href="#">用户协议</a></li>
+						<li><a href="#">隐私政策</a></li>
+						<li><a href="#">帮助中心</a></li>
+						<li><a href="#">中文(简体)</a></li>
+					</ul>
+				</div>
+				<!-- 登录盒子 -->
+				<div class="login-box">
+					<div class="login-card">
+						<div class="item">
+							<div>登录</div>
+						</div>
+						<!-- 账号 -->
+						<div class="user-box">
+							<div class="user">
+								<input class="username" type="text" id="u" required="required"/>
+								<label for="u">邮箱/手机号码/小米ID</label>
+							</div>
+						</div>
+						<!-- 密码 -->
+						<div class="user-box">
+							<div class="user">
+								<input class="password" type="text" id="u" required="required"/>
+								<label for="u">密码</label>
+							</div>
+						</div>
+						<!-- 登录按钮 -->
+						<button class="login-btn" onclick="fun()">登录</button>
+						<!-- 登录说明 -->
+						<div class="login-other">
+							<a href="#" class="other-left">忘记密码？</a>
+							<a href="#" class="other-right">手机号登录</a>
+						</div>
+						<!-- 登录方式 -->
+						<div class="login-method">
+							<h3>其他登录方式</h3>
+							<div class="method-list">
+								<a href="#"><img src="img/登录页/支付宝.jpg" ></a>
+								<a href="#"><img src="img/登录页/微信.jpg" ></a>
+								<a href="#"><img src="img/登录页/QQ.jpg" ></a>
+								<a href="#"><img src="img/登录页/微博.jpg" ></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<script>
+				function fun() {
+					/* 
+					1.如果账号等于：admin
+					2.并且密码等于：123123
+					if(登录成功){
+						跳转到首页页面
+					}else{
+						警告
+					}
+					*/
+		
+					//获取用户名
+					var user = document.querySelector(".username").value;
+					// 获取密码
+					var pass = document.querySelector(".password").value;
+		
+					//如果账号等于：admin,并且密码等于：123123
+					if (user == "admin" && pass == "123123") {
+						alert("登录成功");
+						//  跳转到首页
+						location.href = "./首页.html"
+					} else {
+						alert("账号或密码错误");
+					}
+				}
+		</script> 
+	</body>
+</html>
